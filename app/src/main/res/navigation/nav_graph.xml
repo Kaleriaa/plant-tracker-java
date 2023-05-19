@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="my.plant.tracker.start.StartFragment"
+        android:label="StartFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="my.plant.tracker.auth.login.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="my.plant.tracker.auth.register.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="my.plant.tracker.menu.MenuFragment"
+        android:label="MenuFragment" />
+    <fragment
+        android:id="@+id/plantFragment"
+        android:name="my.plant.tracker.auth.plant.PlantFragment"
+        android:label="PlantFragment" />
+</navigation>

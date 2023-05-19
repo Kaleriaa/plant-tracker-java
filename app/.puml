@@ -1,0 +1,50 @@
+@startuml
+class UserEntity {
+    -id: int;
+    -email: String;
+    -password: String;
+
+    +UserEntity(String, String): void
+}
+class PlantEntity {
+    -id: int;
+    -title: String;
+    -watering: String;
+    -shortDescription: String;
+    -description: String;
+    -photoPath: String;
+    -userEmail: String;
+    +PlantEntity(): void
+    +getTitle(): String
+    +getWatering(): String
+    +getShortDescription(): String
+    +getDescription(): String
+    +getPhotoPath(): String
+    +getUserEmail(): String
+   }
+abstract class PlantDatabase extends RoomDatabase {
+     +abstract plantDao(): PlantDao;
+}
+interface PlantDao
+class SharedPrefsManager {
+    +saveEmail(String email): void
+    +getEmail(): void
+}
+
+class MenuFragment extends Fragment implements OnItemClickListener
+class LoginFragment extends Fragment
+class PlantFragment extends Fragment
+class RegisterFragment extends Fragment
+class LoginViewModel extends ViewModel
+class PlantViewModel extends ViewModel
+class RegisterViewModel extends ViewModel
+class MenuViewModel extends ViewModel
+class StartFragment extends Fragment
+class StartViewModel extends ViewModel
+class MainActivity extends AppCompatActivity
+
+PlantDatabase ..|> PlantDao
+PlantDatabase *-- SharedPrefsManager
+PlantDatabase *-- PlantEntity
+PlantDatabase *-- UserEntity
+@enduml

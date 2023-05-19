@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/auth_edit_text_background"
+        android:hint="Название"
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plantImage" />
+
+    <EditText
+        android:id="@+id/wateringEditText"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/auth_edit_text_background"
+        android:hint="Введите периодичность"
+        android:paddingHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/wateringTitle"
+        app:layout_constraintStart_toEndOf="@id/wateringTitle"
+        app:layout_constraintEnd_toEndOf="@id/titleEditText"
+        app:layout_constraintTop_toTopOf="@id/wateringTitle" />
+
+    <EditText
+        android:id="@+id/smallDescriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/auth_edit_text_background"
+        android:hint="Что любит ?"
+        android:paddingHorizontal="20dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wateringEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@drawable/auth_edit_text_background"
+        android:hint="Примечания"
+        android:paddingHorizontal="20dp"
+        android:textSize="16sp"
+        android:gravity="start"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smallDescriptionEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/plantSave"
+        android:background="@drawable/start_button_background"
+        android:layout_width="wrap_content"
+        android:text="Сохранить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/plantImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_baseline_add_150"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wateringTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:text="Полив"
+        android:textColor="#505050"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleEditText" />
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:text="&lt;"
+        android:textColor="#949494"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
